@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Man Power — Kanubeen Construction</title>
+    <meta name="description" content="Manpower strength and breakdown of Kanubeen Construction." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <a class="brand" href="./index.html">
+          <img class="brand-logo" src="./assets/logo.svg" alt="Kanubeen logo" width="36" height="36" />
+          <span class="brand-title">Kanubeen</span>
+        </a>
+        <nav class="menu" aria-label="Main menu">
+          <a href="./index.html">Home</a>
+          <div class="dropdown" data-dropdown aria-expanded="false">
+            <button type="button" class="dropbtn" data-dropdown-button aria-haspopup="true" aria-expanded="false" aria-controls="projects-menu">Projects</button>
+            <div class="dropdown-panel" id="projects-menu" role="menu" data-dropdown-panel>
+              <a role="menuitem" href="./projects.html?cat=road">Road &amp; Highway</a>
+              <a role="menuitem" href="./projects.html?cat=bridges">Bridge Projects</a>
+              <a role="menuitem" href="./projects.html?cat=buildings">Building Projects</a>
+            </div>
+          </div>
+          <a href="./equipments.html">Equipments</a>
+          <a href="./organization.html">Organization</a>
+          <a href="./manpower.html" aria-current="page">Man Power</a>
+          <a href="./turnover.html">Turnover</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false" data-burger>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="#e6f1ff" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="container mobile-menu" data-mobile-menu hidden>
+        <a href="./index.html">Home</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./equipments.html">Equipments</a>
+        <a href="./organization.html">Organization</a>
+        <a href="./manpower.html">Man Power</a>
+        <a href="./turnover.html">Turnover</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="section-title">Man Power</h1>
+      <div class="panel" style="padding: 14px;">
+        <h2>Total workforce: 2,238</h2>
+      </div>
+
+      <div class="bar-list" style="margin-top: 16px;">
+        <div class="bar" style="--w: 0%" data-bar data-value="5"><span class="label">Directors</span><span class="value">5</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="16"><span class="label">Managers</span><span class="value">16</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="24"><span class="label">Engineers</span><span class="value">24</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="33"><span class="label">Administrators</span><span class="value">33</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="114"><span class="label">Supervisors</span><span class="value">114</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="157"><span class="label">Technicians</span><span class="value">157</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="204"><span class="label">Operators</span><span class="value">204</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="536"><span class="label">Skilled</span><span class="value">536</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="687"><span class="label">Semi-Skilled</span><span class="value">687</span></div>
+        <div class="bar" style="--w: 0%" data-bar data-value="462"><span class="label">Unskilled</span><span class="value">462</span></div>
+      </div>
+
+      <script>
+        (function(){
+          const bars = document.querySelectorAll('[data-bar]');
+          if(!bars.length) return;
+          const max = Math.max(...Array.from(bars).map(b=>Number(b.dataset.value)));
+          bars.forEach((b, i)=>{
+            const pct = Math.round((Number(b.dataset.value)/max)*100);
+            if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+              b.style.setProperty('--w', pct + '%');
+            } else {
+              setTimeout(()=> b.style.setProperty('--w', pct + '%'), 80 + i*60);
+            }
+          });
+        })();
+      </script>
+    </main>
+
+    <footer class="footer">
+      <div class="container row">
+        <div><strong>Kanubeen Construction</strong> — Linking the future.</div>
+        <nav class="links">
+          <a href="./projects.html">Projects</a>
+          <a href="./equipments.html">Equipments</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div>© <span id="y"></span> Kanubeen</div>
+      </div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
+  </body>
+  </html>
+

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Organization — Kanubeen Construction</title>
+    <meta name="description" content="Organizational structure of Kanubeen Construction." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <a class="brand" href="./index.html">
+          <img class="brand-logo" src="./assets/logo.svg" alt="Kanubeen logo" width="36" height="36" />
+          <span class="brand-title">Kanubeen</span>
+        </a>
+        <nav class="menu" aria-label="Main menu">
+          <a href="./index.html">Home</a>
+          <div class="dropdown" data-dropdown aria-expanded="false">
+            <button type="button" class="dropbtn" data-dropdown-button aria-haspopup="true" aria-expanded="false" aria-controls="projects-menu">Projects</button>
+            <div class="dropdown-panel" id="projects-menu" role="menu" data-dropdown-panel>
+              <a role="menuitem" href="./projects.html?cat=road">Road &amp; Highway</a>
+              <a role="menuitem" href="./projects.html?cat=bridges">Bridge Projects</a>
+              <a role="menuitem" href="./projects.html?cat=buildings">Building Projects</a>
+            </div>
+          </div>
+          <a href="./equipments.html">Equipments</a>
+          <a href="./organization.html" aria-current="page">Organization</a>
+          <a href="./manpower.html">Man Power</a>
+          <a href="./turnover.html">Turnover</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false" data-burger>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="#e6f1ff" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="container mobile-menu" data-mobile-menu hidden>
+        <a href="./index.html">Home</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./equipments.html">Equipments</a>
+        <a href="./organization.html">Organization</a>
+        <a href="./manpower.html">Man Power</a>
+        <a href="./turnover.html">Turnover</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="section-title">Organization</h1>
+
+      <section class="panel" style="padding: 14px; margin-bottom: 16px;" aria-labelledby="org-chart-title">
+        <h2 id="org-chart-title" class="section-title" style="margin-top: 0;">Interactive Organization Flow</h2>
+        <div style="display:flex; gap:10px; align-items:center; margin-bottom:10px;">
+          <button class="btn" type="button" data-zoom-in>Zoom In</button>
+          <button class="btn" type="button" data-zoom-out>Zoom Out</button>
+          <button class="btn" type="button" data-zoom-reset>Reset</button>
+          <span class="muted">Tip: Scroll to zoom, drag to pan, press Esc to reset.</span>
+        </div>
+        <div class="panel" style="padding:0; overflow:hidden; height:520px;" data-org-chart aria-label="Organization flow diagram" role="img"></div>
+      </section>
+
+      <section class="panel" style="padding: 14px;">
+        <details open>
+          <summary><strong>Board of Directors</strong> <span class="muted">(press Enter to toggle)</span></summary>
+          <ul>
+            <li>Chairman</li>
+            <li>Executive Vice</li>
+            <li>Managing Director</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="panel" style="padding: 14px; margin-top: 16px;">
+        <details open>
+          <summary><strong>Hierarchy Details</strong> <span class="muted">(press Enter to toggle)</span></summary>
+          <div class="spacer"></div>
+          <div class="grid">
+            <div>
+              <h3>Deputy MD</h3>
+              <ul>
+                <li>Construction Manager
+                  <ul>
+                    <li>Project Managers
+                      <ul>
+                        <li>Project Engineers</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Safety Manager
+                  <ul>
+                    <li>Senior Safety
+                      <ul>
+                        <li>Safety Officers</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Contracts Director</h3>
+              <ul>
+                <li>Contract Manager</li>
+                <li>Business Devp.</li>
+                <li>Q.C. Manager
+                  <ul>
+                    <li>Cost Control</li>
+                  </ul>
+                </li>
+                <li>Design Engineer</li>
+                <li>Tendering Engineer</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Plant Director</h3>
+              <ul>
+                <li>Plant Manager
+                  <ul>
+                    <li>Ass. Plant Manager
+                      <ul>
+                        <li>Plant Engineers</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Director Fin. &amp; Admin.</h3>
+              <ul>
+                <li>Procurement Manager
+                  <ul>
+                    <li>Overseas Procurement
+                      <ul>
+                        <li>Local Procurement</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Audit Manager</li>
+                <li>Finance Manager</li>
+                <li>Admin. Manager</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Director Corp.</h3>
+              <ul>
+                <li>P.R. Manager
+                  <ul>
+                    <li>P.R. Officer
+                      <ul>
+                        <li>Legal Officer</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container row">
+        <div><strong>Kanubeen Construction</strong> — Linking the future.</div>
+        <nav class="links">
+          <a href="./projects.html">Projects</a>
+          <a href="./equipments.html">Equipments</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div>© <span id="y"></span> Kanubeen</div>
+      </div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
+  </body>
+  </html>
+

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Equipments - Kanubeen Construction</title>
+    <meta name="description" content="Key construction equipment and plant fleet of Kanubeen Construction." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <a class="brand" href="./index.html">
+          <img class="brand-logo" src="./assets/logo.svg" alt="Kanubeen logo" width="36" height="36" />
+          <span class="brand-title">Kanubeen</span>
+        </a>
+        <nav class="menu" aria-label="Main menu">
+          <a href="./index.html">Home</a>
+          <div class="dropdown" data-dropdown aria-expanded="false">
+            <button type="button" class="dropbtn" data-dropdown-button aria-haspopup="true" aria-expanded="false" aria-controls="projects-menu">Projects</button>
+            <div class="dropdown-panel" id="projects-menu" role="menu" data-dropdown-panel>
+              <a role="menuitem" href="./projects.html?cat=road">Road &amp; Highway</a>
+              <a role="menuitem" href="./projects.html?cat=bridges">Bridge Projects</a>
+              <a role="menuitem" href="./projects.html?cat=buildings">Building Projects</a>
+            </div>
+          </div>
+          <a href="./equipments.html" aria-current="page">Equipments</a>
+          <a href="./organization.html">Organization</a>
+          <a href="./manpower.html">Man Power</a>
+          <a href="./turnover.html">Turnover</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false" data-burger>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="#e6f1ff" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="container mobile-menu" data-mobile-menu hidden>
+        <a href="./index.html">Home</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./equipments.html">Equipments</a>
+        <a href="./organization.html">Organization</a>
+        <a href="./manpower.html">Man Power</a>
+        <a href="./turnover.html">Turnover</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="section-title">Equipments</h1>
+
+      <section class="panel" style="padding: 14px; margin-bottom: 18px;">
+        <h2>Heavy Plant</h2>
+        <table>
+          <thead>
+            <tr><th>Equipment Type</th><th>Quantity</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Excavators</td><td>74</td></tr>
+            <tr><td>Wheel Loaders</td><td>48</td></tr>
+            <tr><td>Bulldozers</td><td>36</td></tr>
+            <tr><td>Motor Graders</td><td>22</td></tr>
+            <tr><td>Compactors/Rollers</td><td>41</td></tr>
+            <tr><td>Asphalt Pavers</td><td>15</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel" style="padding: 14px;">
+        <h2>Support Fleet</h2>
+        <table>
+          <thead>
+            <tr><th>Equipment Type</th><th>Quantity</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Concrete Mixers</td><td>29</td></tr>
+            <tr><td>Tipper/Transit Trucks</td><td>95</td></tr>
+            <tr><td>Lowbed/Flatbed Trailers</td><td>18</td></tr>
+            <tr><td>Site Generators</td><td>52</td></tr>
+            <tr><td>Survey/Geo Equipment Sets</td><td>33</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section style="margin-top: 18px;">
+        <h2 class="section-title">Concrete Batching Plants</h2>
+        <div class="grid">
+          <figure class="panel" style="padding: 8px;">
+            <img data-placeholder="equipment" data-text="BATCH PLANT" alt="Concrete batching plant" />
+            <figcaption class="muted" style="padding: 8px 10px;">Plant A - 120 m³/h</figcaption>
+          </figure>
+          <figure class="panel" style="padding: 8px;">
+            <img data-placeholder="equipment" data-text="BATCH PLANT" alt="Concrete batching plant" />
+            <figcaption class="muted" style="padding: 8px 10px;">Plant B - 90 m³/h</figcaption>
+          </figure>
+          <figure class="panel" style="padding: 8px;">
+            <img data-placeholder="equipment" data-text="BATCH PLANT" alt="Concrete batching plant" />
+            <figcaption class="muted" style="padding: 8px 10px;">Plant C - 60 m³/h</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container row">
+        <div><strong>Kanubeen Construction</strong> - Linking the future.</div>
+        <nav class="links">
+          <a href="./projects.html">Projects</a>
+          <a href="./equipments.html">Equipments</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div>© <span id="y"></span> Kanubeen</div>
+      </div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
+  </body>
+  </html>
+

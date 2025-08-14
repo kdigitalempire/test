@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Turnover — Kanubeen Construction</title>
+    <meta name="description" content="Turnover (Million Naira), Year ending 31 March. 2015–2020." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <a class="brand" href="./index.html">
+          <img class="brand-logo" src="./assets/logo.svg" alt="Kanubeen logo" width="36" height="36" />
+          <span class="brand-title">Kanubeen</span>
+        </a>
+        <nav class="menu" aria-label="Main menu">
+          <a href="./index.html">Home</a>
+          <div class="dropdown" data-dropdown aria-expanded="false">
+            <button type="button" class="dropbtn" data-dropdown-button aria-haspopup="true" aria-expanded="false" aria-controls="projects-menu">Projects</button>
+            <div class="dropdown-panel" id="projects-menu" role="menu" data-dropdown-panel>
+              <a role="menuitem" href="./projects.html?cat=road">Road &amp; Highway</a>
+              <a role="menuitem" href="./projects.html?cat=bridges">Bridge Projects</a>
+              <a role="menuitem" href="./projects.html?cat=buildings">Building Projects</a>
+            </div>
+          </div>
+          <a href="./equipments.html">Equipments</a>
+          <a href="./organization.html">Organization</a>
+          <a href="./manpower.html">Man Power</a>
+          <a href="./turnover.html" aria-current="page">Turnover</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false" data-burger>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h18M3 18h18" stroke="#e6f1ff" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="container mobile-menu" data-mobile-menu hidden>
+        <a href="./index.html">Home</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./equipments.html">Equipments</a>
+        <a href="./organization.html">Organization</a>
+        <a href="./manpower.html">Man Power</a>
+        <a href="./turnover.html">Turnover</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="section-title">Turnover</h1>
+      <p class="chart-title">Turnover (Million Naira), Year ending 31 March</p>
+      <div class="panel chart" style="padding: 12px;">
+        <div data-chart class="chart-wrap"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container row">
+        <div><strong>Kanubeen Construction</strong> — Linking the future.</div>
+        <nav class="links">
+          <a href="./projects.html">Projects</a>
+          <a href="./equipments.html">Equipments</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div>© <span id="y"></span> Kanubeen</div>
+      </div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
+  </body>
+  </html>
+
