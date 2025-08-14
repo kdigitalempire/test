@@ -24,6 +24,7 @@
   function initHeaderMenu() {
     const burger = document.querySelector('[data-burger]');
     const mobileMenu = document.querySelector('[data-mobile-menu]');
+    const mobileOverlay = document.querySelector('[data-mobile-overlay]');
     const dropdown = document.querySelector('[data-dropdown]');
     const dropdownButton = dropdown ? dropdown.querySelector('[data-dropdown-button]') : null;
     const dropdownPanel = dropdown ? dropdown.querySelector('[data-dropdown-panel]') : null;
@@ -34,6 +35,15 @@
         const expanded = burger.getAttribute('aria-expanded') === 'true';
         burger.setAttribute('aria-expanded', String(!expanded));
         mobileMenu.hidden = expanded;
+        document.body.classList.toggle('mobile-open', !expanded);
+      });
+    }
+
+    if (mobileOverlay && burger && mobileMenu) {
+      mobileOverlay.addEventListener('click', () => {
+        burger.setAttribute('aria-expanded', 'false');
+        mobileMenu.hidden = true;
+        document.body.classList.remove('mobile-open');
       });
     }
 
